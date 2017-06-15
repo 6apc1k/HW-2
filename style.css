@@ -1,3 +1,11 @@
+body {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
 h1 {
 	font-family: 'oswald-bold', helvetica, sans-serif, arial;
 	text-transform: uppercase;
@@ -11,7 +19,7 @@ h1 {
 
 /*Logo style */
 
-section.logo {
+figure.logo {
 	font-family: 'Oswald', sans-serif, helvetica, arial;
 	color: rgb(70, 69, 71);
 	font-size: 80px;
@@ -33,13 +41,15 @@ section.logo {
 	transform: translate(-100%, 0);
 }
 main {
+	
+	margin: 20px 75px;
 	overflow: hidden;
-	margin: 25px 70px;
 }
 article {
 	width: 99%;
 	margin: auto;
 	margin-top: 180px;
+	
 }
 .block {
 	display: inline-block;
@@ -68,14 +78,15 @@ img {
 	transition: opacity 1s, visibility 1s;
 	z-index: 2;
 }
+
 #expanded:target {
 	opacity: 1;
 	display: inline-block;
 	transition: opacity 1s, visibility 1s;
 }
-#expanded:target a[href="expanded"]~div.overlay {
-	display: none;
-}
+
+
+
 .arrow_box {
 	position: relative;
 	background: #f7f7f2;
@@ -89,7 +100,7 @@ img {
 	height: 0;
 	width: 0;
 	position: absolute;
-	pointer-events: none;
+	
 }
 .arrow_box:after {
 	border-color: rgba(247, 247, 242, 0);
@@ -178,7 +189,9 @@ div.overlay {
 		opacity: 1.0;
 	}
 }
-section:hover div.overlay {
+
+
+wrapper:hover div.overlay {
 	animation: example 0.5s forwards;
 }
 .block11 {
@@ -204,10 +217,10 @@ table.country tr:first-child td {
 	font-size: 80px;
 	font-weight: bold;
 }
-section:hover td {
+wrapper:hover td {
 	animation: example2 0.5s forwards;
 }
-section:hover span.country {
+wrapper:hover span.country {
 	animation: example3 0.5s forwards;
 }
 @keyframes example2 {
