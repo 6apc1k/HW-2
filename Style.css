@@ -1,0 +1,247 @@
+h1 {
+	font-family: 'oswald-bold', helvetica, sans-serif, arial;
+	text-transform: uppercase;
+	font-stretch: condensed;
+	color: #464547;
+	text-align: center;
+	font-weight: 900;
+	margin-top: 100px;
+    margin-bottom: -50px;
+}
+
+/*Logo style */
+
+section.logo {
+	font-family: 'Oswald', sans-serif, helvetica, arial;
+	color: rgb(70, 69, 71);
+	font-size: 80px;
+	-webkit-transform: scale(1.5, 1.7);
+	margin-left: 670px;
+	letter-spacing: -2px;
+}
+.logo::before {
+	bottom: 0;
+	color: #39C2D7;
+	content: '<';
+	position: absolute;
+}
+.logo::after {
+	bottom: 0;
+	color: #39C2D7;
+	content: '>';
+	position: absolute;
+	transform: translate(-100%, 0);
+}
+main {
+	overflow: hidden;
+	margin: 25px 70px;
+}
+article {
+	width: 99%;
+	margin: auto;
+	margin-top: 180px;
+}
+.block {
+	display: inline-block;
+	position: relative;
+	float: left;
+	margin-bottom: 20px;
+}
+img {
+	width: 280px;
+	height: 280px;
+	z-index: 10;
+}
+.block1, .block2, .block3, .block5, .block6, .block7, .block9, .block10, .block11, .block13, .block14, .block15 {
+	margin-right: 19px;
+}
+#expanded {
+	width: 100%;
+	height: 370px;
+	border: 1px solid #adadad;
+	border-radius: 3px;
+	clear: both;
+	background-color: #f7f7f2;
+	margin-bottom: 20px;
+	opacity: 0;
+	display: none;
+	transition: opacity 1s, visibility 1s;
+	z-index: 2;
+}
+#expanded:target {
+	opacity: 1;
+	display: inline-block;
+	transition: opacity 1s, visibility 1s;
+}
+#expanded:target a[href="expanded"]~div.overlay {
+	display: none;
+}
+.arrow_box {
+	position: relative;
+	background: #f7f7f2;
+	left: 63%;
+}
+.arrow_box:after, .arrow_box:before {
+	bottom: 100%;
+	left: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.arrow_box:after {
+	border-color: rgba(247, 247, 242, 0);
+	border-bottom-color: #f7f7f2;
+	border-width: 10px;
+	margin-left: -10px;
+}
+.arrow_box:before {
+	border-color: rgba(173, 173, 173, 0);
+	border-bottom-color: #adadad;
+	border-width: 11px;
+	margin-left: -11px;
+}
+table.description {
+	margin: 30px 50px;
+	border-spacing: 10px;
+	border-collapse: collapse;
+	font-family: 'oswald-bold', helvetica, sans-serif, arial;
+}
+table.description tr:first-child {
+	font-family: 'oswald-bold', helvetica, sans-serif, arial;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: #39C2D7;
+	font-weight: bold;
+}
+table.description tr:nth-child(2) td {
+	color: #333232;
+	padding: 20px 160px 0px 0px;
+	font-weight: bold;
+	font-size: 18px;
+}
+table.description tr:nth-child(3) td {
+	color: #605f5f;
+}
+a {
+	text-decoration: none;
+	color: #707530;
+	padding-top: 10px;
+	font-weight: bold;
+}
+table.description tr:nth-child(4) td {
+	padding-top: 10px;
+	font-weight: bold;
+}
+table.description tr td:nth-child(2), tr td:nth-child(3) {
+	padding-left: 30px;
+}
+table.description td {
+	border-right: 1px solid #adadad;
+}
+table.description td:last-child {
+	border: none;
+}
+table.description tr:nth-child(2) td:nth-child(3) {
+	padding-left: 28px;
+}
+div.overlay {
+	position: absolute;
+	height: 30px;
+	width: 280px;
+	background-color: rgba(0, 0, 0, 0.69);
+	z-index: 100;
+	bottom: 4px;
+	font-size: 18px;
+	color: white;
+	font-family: 'oswald-bold', helvetica, sans-serif, arial;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 20px;
+}
+@keyframes example {
+	from {
+		height: 30px;
+	}
+	to {
+		height: 260px;
+	}
+	90% {
+		transform: scale(1.0);
+		opacity: 1.0;
+	}
+	100% {
+		transform: scale(1.0);
+		opacity: 1.0;
+	}
+}
+section:hover div.overlay {
+	animation: example 0.5s forwards;
+}
+.block11 {
+	margin-top: -10px;
+}
+
+/* number of cities */
+
+table.country {
+	position: absolute;
+	top: 80px;
+	left: 100px;
+	color: white;
+	visibility: hidden;
+	font-family: 'oswald-bold', helvetica, sans-serif, arial;
+	text-transform: uppercase;
+}
+table.country tr td {
+	font-size: 20px;
+	font-weight: bold;
+}
+table.country tr:first-child td {
+	font-size: 80px;
+	font-weight: bold;
+}
+section:hover td {
+	animation: example2 0.5s forwards;
+}
+section:hover span.country {
+	animation: example3 0.5s forwards;
+}
+@keyframes example2 {
+	30% {
+		visibility: hidden;
+		opacity: 0.5;
+	}
+	45% {
+		visibility: visible;
+		opacity: 0.7;
+	}
+	90% {
+		visibility: visible;
+		opacity: 0.8;
+	}
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+@keyframes example3 {
+	5% {
+		opacity: 1;
+	}
+	10% {
+		opacity: 0.6;
+	}
+	20% {
+		opacity: 0.4;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 0;
+	}
+}
